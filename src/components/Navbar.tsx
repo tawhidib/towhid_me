@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import CloseIcon from "@mui/icons-material/Close";
 
 interface NavbarProps {
   window?: () => Window;
@@ -38,16 +39,35 @@ const Navbar: React.FC = (props: NavbarProps) => {
   const myName = "Towhid_Dev";
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        {myName}
-      </Typography>
-      <Divider />
-      <List>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        height: "100dvh",
+        width: "100dvw",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative",
+      }}
+    >
+      <Box
+        component={"div"}
+        sx={{
+          position: "absolute",
+          top: "10px",
+          right: "10px",
+          fontSize: "1.2rem",
+        }}
+      >
+        <IconButton>
+          <CloseIcon sx={{ fontSize: "2rem" }} />
+        </IconButton>
+      </Box>
+      <List sx={{ width: "100%" }}>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+          <ListItem key={item}>
+            <ListItemButton sx={{ textAlign: "center", display: "block" }}>
+              <ListItemText primary={item} sx={{ display: "block" }} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -84,7 +104,10 @@ const Navbar: React.FC = (props: NavbarProps) => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button
+                key={item}
+                sx={{ color: "#fff", textTransform: "capitalize" }}
+              >
                 {item}
               </Button>
             ))}
@@ -104,7 +127,7 @@ const Navbar: React.FC = (props: NavbarProps) => {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: "100vw",
             },
           }}
         >
