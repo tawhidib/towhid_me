@@ -47,7 +47,7 @@ const Navbar: React.FC = (props: NavbarProps) => {
         alignItems: "center",
         justifyContent: "center",
         position: "relative",
-        // backgroundColor: "#0E1628",
+        backgroundColor: "#0E1628",
       }}
     >
       <Box
@@ -84,7 +84,7 @@ const Navbar: React.FC = (props: NavbarProps) => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{ backgroundColor: "#0B1221" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -109,7 +109,14 @@ const Navbar: React.FC = (props: NavbarProps) => {
             {navItems.map((item) => (
               <Button
                 key={item}
-                sx={{ color: "#fff", textTransform: "capitalize" }}
+                sx={{
+                  color: "#fff",
+                  textTransform: "capitalize",
+                  "&:hover": { backgroundColor: "transparent" },
+                }}
+                disableElevation
+                disableRipple
+                disableFocusRipple
               >
                 {item}
               </Button>
