@@ -7,9 +7,12 @@ const Banner = (): JSX.Element => {
   return (
     <Box
       component={"div"}
-      sx={{ mt: "24px", py: "80px", backgroundColor: "red" }}
+      sx={{ mt: "24px", py: "80px", background: "" }}
+      className="banner-bg"
     >
-      <Typography variant="h4">My name is tawhid</Typography>
+      <Container maxWidth={"lg"} sx={{ mx: "auto" }}>
+        <Typography variant="h4">My name is tawhid</Typography>
+      </Container>
     </Box>
   );
 };
