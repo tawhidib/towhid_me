@@ -10,7 +10,7 @@ const CustomTheme = (props: CustomThemeProps): JSX.Element => {
     palette: {
       mode: "dark",
       background: {
-        default: "#1D3557",
+        default: "#0F172A",
       },
       text: {
         primary: "#F1FAEE",
