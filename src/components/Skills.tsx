@@ -79,7 +79,7 @@ export default function Skills() {
           spaceBetween={30}
           breakpoints={{
             0: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
             600: {
               slidesPerView: 4,
