@@ -29,6 +29,8 @@ import {
   SiExpress,
 } from "react-icons/si";
 
+import { DiMongodb } from "react-icons/di";
+
 import { TbBrandNextjs } from "react-icons/tb";
 import {
   BsFiletypeScss,
@@ -61,6 +63,7 @@ const mySkills: MySKillType[] = [
   { icon: <TbBrandNextjs />, name: "NextJs", color: "#414141" },
   { icon: <SiExpress />, name: "Express", color: "#414141" },
   { icon: <BsFiletypeSql />, name: "SQL", color: "#0075CF" },
+  { icon: <DiMongodb />, name: "MongoDB", color: "#00E661" },
   { icon: <SiPostgresql />, name: "Postgres", color: "#31648C" },
   { icon: <FaNode />, name: "NodeJs", color: "#87BF00" },
 ];
