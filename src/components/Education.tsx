@@ -13,6 +13,8 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Box } from "@mui/material";
+import { FaUserGraduate, FaSchool } from "react-icons/fa";
+import { GiFamilyHouse } from "react-icons/gi";
 
 export default function Education() {
   return (
@@ -33,8 +35,13 @@ export default function Education() {
       >
         me as student
       </Typography>
-      <Box sx={{ width: "60px", content: "''", background: "red" }}></Box>
+
+      {/* NOTE:
+        bottom line for a section should be implemented  
+        */}
+
       <Timeline sx={{ mt: "40px" }} position="alternate">
+        {/* university  */}
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
@@ -42,72 +49,87 @@ export default function Education() {
             variant="body2"
             color="text.secondary"
           >
-            9:30 am
+            December, 2021
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
-            <TimelineDot>
-              <FastfoodIcon />
+            <TimelineDot
+              sx={{ fontSize: "40px", color: "success", p: "0.8rem" }}
+              color="success"
+              variant="outlined"
+            >
+              <FaUserGraduate />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Eat
+              Bachelor of Computer Science & Engineering
             </Typography>
-            <Typography>Because you need strength</Typography>
+            <Typography>
+              Daffodil International University, Bangladesh
+            </Typography>
+            <Typography>CGPA 3.4 out of 4.0</Typography>
           </TimelineContent>
         </TimelineItem>
+        {/* college  */}
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            2014 - 2015
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
-            <TimelineDot color="primary">
-              <LaptopMacIcon />
+            <TimelineDot
+              sx={{ fontSize: "40px", color: "white", p: "0.8rem" }}
+              color="success"
+              variant="outlined"
+            >
+              <GiFamilyHouse />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Higher Secondary Certificate
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Government Science College, Dhaka, Bangladesh
+            </Typography>
+            <Typography>Major: Science</Typography>
+            <Typography>GPA 4.33 out of 5.00</Typography>
           </TimelineContent>
         </TimelineItem>
+        {/* school  */}
         <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            variant="body2"
+            color="text.secondary"
+          >
+            2012 - 2013
+          </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
-            <TimelineDot color="primary" variant="outlined">
-              <HotelIcon />
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography variant="h6" component="span">
-              Sleep
-            </Typography>
-            <Typography>Because you need rest</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-            <TimelineDot color="secondary">
-              <RepeatIcon />
+            <TimelineDot
+              sx={{ fontSize: "40px", color: "white", p: "0.8rem" }}
+              color="success"
+              variant="outlined"
+            >
+              <FaSchool />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Repeat
+              Secondary School Certificate
             </Typography>
-            <Typography>Because this is the life you love!</Typography>
+            <Typography>Mirhazirbug Ideal High School</Typography>
+            <Typography>Major: Science</Typography>
+            <Typography>GPA 5.0 out of 5.0</Typography>
           </TimelineContent>
         </TimelineItem>
       </Timeline>

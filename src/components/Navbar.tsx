@@ -100,7 +100,7 @@ const Navbar: React.FC = (props: NavbarProps) => {
             component="div"
             sx={{
               flexGrow: 1,
-              textAlign: { xs: "center", md: "left" },
+              textAlign: { xs: "center", sm: "left" },
             }}
           >
             {myName}
